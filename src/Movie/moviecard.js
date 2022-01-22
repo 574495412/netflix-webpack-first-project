@@ -16,19 +16,19 @@ function MovieCard(props) {
           <span className="date pe-2 mt-4">{props.release_date}</span>
         </div>
 
-        <div className="card-body">
+        <div className="card-body p-1">
           <h5 className="card-title">{props.title}</h5>
           <div className="position-relative">
             <img
               src={`https://image.tmdb.org/t/p/w500/${props.image}`}
               width="auto"
-              height="300"
+              height="275"
               className="card-img-top"
               alt="photo"
             />
             <i className="far fa-star ratestar position-absolute top-100 start-50 translate-middle"></i>
           </div>
-          <div className="d-flex justify-content-around  mt-4">
+          <div className="d-flex justify-content-around  mt-5">
             <Link
               to={`/movie-details/${props.id}`}
               key={props.id}

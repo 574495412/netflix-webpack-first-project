@@ -4,6 +4,7 @@ import "./movie.css";
 import Loading from "../Loading/Loading";
 import axiosInstance from "../axiosConfig/axiosConfig";
 
+
 function Movie() {
   let [page, setPage] = useState(1);
   const [movies, setMovies] = useState([]);
@@ -30,32 +31,32 @@ function Movie() {
 
   return (
     <>
-      <div className="container">
-        <div className="row d-flex justify-content-center">
-          <Loading />
+        <div className="container">
+          <div className="row d-flex justify-content-center">
+            <Loading />
+          </div>
+          <div className="row d-flex justify-content-between mt-3">
+            <button onClick={() => prevBtn()} className="btn page-button ms-5">
+              <i class="fas fa-angle-left me-2"></i>Previous
+            </button>
+            <button onClick={() => nextBtn()} className="btn page-button me-5">
+              Next
+              <i class="fas fa-angle-right ms-2"></i>
+            </button>
+          </div>
+          <div className="row movie-page-content">
+            {movies.map((movie, index) => (
+              <div key={index} className="col-md-4">
+                <MovieCard
+                  title={movie.title}
+                  release_date={movie.release_date}
+                  rate={movie.vote_average}
+                  image={movie.poster_path}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="row d-flex justify-content-between mt-3">
-          <button onClick={() => prevBtn()} className="btn page-button ms-5">
-            <i class="fas fa-angle-left me-2"></i>Previous
-          </button>
-          <button onClick={() => nextBtn()} className="btn page-button me-5">
-            Next
-            <i class="fas fa-angle-right ms-2"></i>
-          </button>
-        </div>
-        <div className="row movie-page-content">
-          {movies.map((movie, index) => (
-            <div key={index} className="col-md-4">
-              <MovieCard
-                title={movie.title}
-                release_date={movie.release_date}
-                rate={movie.vote_average}
-                image={movie.poster_path}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
     </>
   );
 }
