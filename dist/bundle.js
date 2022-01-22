@@ -1374,7 +1374,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction valueOf(obj) {\n  re
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"7f308d442667c8d43115.jpg\";\n\n//# sourceURL=webpack://netflix/./public/images/EG-en-20220103-popsignuptwoweeks-perspective_alpha_website_small.jpg?");
+eval("module.exports = __webpack_require__.p + \"images/EG-en-20220103-popsignuptwoweeks-perspective_alpha_website_small.jpg\";\n\n//# sourceURL=webpack://netflix/./public/images/EG-en-20220103-popsignuptwoweeks-perspective_alpha_website_small.jpg?");
 
 /***/ }),
 
@@ -1385,7 +1385,7 @@ eval("module.exports = __webpack_require__.p + \"7f308d442667c8d43115.jpg\";\n\n
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"c8479ece65f26b534b40.svg\";\n\n//# sourceURL=webpack://netflix/./src/logo2.svg?");
+eval("module.exports = __webpack_require__.p + \"images/logo2.svg\";\n\n//# sourceURL=webpack://netflix/./src/logo2.svg?");
 
 /***/ }),
 
