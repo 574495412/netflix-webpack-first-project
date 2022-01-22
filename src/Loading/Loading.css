@@ -1,0 +1,38 @@
+.cont{
+    display: flex;
+    flex-direction: row;
+    height:100%;
+    padding: 25% 45%;
+}
+
+.loading1,
+.loading2,
+.loading3 {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 0;
+    background-color:rgba(94, 63, 63, 0.3);
+    animation-name: loading;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.loading1{
+    animation-delay: 0.2s;
+}
+.loading2{
+    animation-delay: 0.5s;
+}
+.loading3{
+    animation-delay: 1s;
+}
+
+@keyframes loading {
+    to{
+        background-color:rgb(94, 63, 63);
+        transform: translateY(10px);
+    }
+}

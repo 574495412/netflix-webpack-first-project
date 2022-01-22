@@ -1,0 +1,77 @@
+.fadediv3 {
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.904);
+}
+
+.movie-card {
+  background-color: #00000096;
+  height: 500px;
+  margin-bottom: 30px;
+}
+
+.movie-page-content {
+  padding: 20px 40px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.rating{
+  color:gold;
+  font-weight:900;
+  font-size:30px;
+}
+
+.ratestar{
+  color: gold;
+  font-size:40px;
+}
+
+.ratestar:hover{
+  color: gold;
+  font-weight: 900;
+}
+
+.date{
+  color: whitesmoke;
+  font-size:10px;
+}
+.card-title{
+  font-size: 20px;
+  text-align: center;
+  font-weight:500;
+}
+.watch{
+  border:.1px solid whitesmoke;
+  background-color:transparent;
+  color:whitesmoke;
+  font-weight: 100;
+}
+
+.watch:hover{
+  border:.1px solid #e50914 ;
+  background-color:whitesmoke;
+  color:#e50914;
+  font-weight: 700;
+}
+
+.page-button{
+  width: 100px;
+  height:30px;
+  background-color: rgba(0,0,0, 0);
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 10px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-button i {
+  font-size:30px;
+  text-align: center;
+}
+.pagebtn{
+  font-style: italic;
+}
