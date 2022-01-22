@@ -1,6 +1,7 @@
 import { createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
-import languageReducer from "./Reducer"
+import Reducer from "./Reducer";
 
-const store = createStore(languageReducer,composeWithDevTools())
+const store = createStore(Reducer, composeWithDevTools());
 export default store;
+  

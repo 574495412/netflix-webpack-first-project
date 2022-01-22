@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./movie.css";
 import axiosInstance from "../axiosConfig/axiosConfig";
+import Loading from "../Loading/Loading";
+import { useSelector } from "react-redux";
 
 const MovieDetails = () => {
   const params = useParams();
@@ -16,6 +18,7 @@ const MovieDetails = () => {
         console.log(error);
       });
   }, []);
+  const loader = useSelector((state) => state.loader);
 
   return (
     <>
@@ -23,6 +26,7 @@ const MovieDetails = () => {
         <div className="fadediv2">
           <div className="pagecontent">
             <div className="container fadecon">
+              {loader && <Loading />}
               <div id={movie.id}>
                 <h1>{movie.title}</h1>
                 <img src={movie.image} alt="movie poster" />
