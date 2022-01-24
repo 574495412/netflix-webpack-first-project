@@ -4,10 +4,3 @@ export default function changeLanguage(data) {
     payload: data,
   };
 }
-
-export function loaderStatus(status) {
-  return {
-    type: "SET_LOADER",
-    payload: status,
-  };
-}

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import store from "./store/Store";
+import store from "./Redux/Store/Store";
 import "./index.css";
 import App from "./App";
 
@@ -11,3 +11,4 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );
+ 

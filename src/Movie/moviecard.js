@@ -3,8 +3,16 @@
 import React from "react";
 import "./movie.css";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import FavReducer from "../Redux/Reducers/FavReducer";
 
 function MovieCard(props) {
+  const dispatch = useDispatch;
+  const favorite = useSelector((state) => state.favorite);
+  const addToFav = () => {
+    dispatch(FavReducer(favorite === false ? true : false));
+  };
+
   return (
     <>
       <div
@@ -26,14 +34,17 @@ function MovieCard(props) {
               className="card-img-top"
               alt="photo"
             />
-            <i className="far fa-star ratestar position-absolute top-100 start-50 translate-middle"></i>
+            <i
+              className="far fa-star ratestar position-absolute top-100 start-50 translate-middle"
+              style={
+                favorite === false ? { fontWeight: 100 } : { fontWeight: 900 }
+              }
+            >
+              <button onClick={() => addToFav()}></button>
+            </i>
           </div>
           <div className="d-flex justify-content-around  mt-5">
-            <Link
-              to={`/movie-details/${props.id}`}
-              key={props.id}
-              className="btn watch"
-            >
+            <Link to={`/details/${props.id}`} className="btn watch">
               see more
             </Link>
           </div>

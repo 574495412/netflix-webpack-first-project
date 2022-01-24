@@ -21,12 +21,10 @@ function Movie() {
 
   let nextBtn = () => {
     setPage(++page);
-    console.log(page);
   };
 
   let prevBtn = () => {
     setPage(--page);
-    console.log(page);
   };
 
   const loader = useSelector((state) => state.loader);
@@ -54,13 +52,26 @@ function Movie() {
                 release_date={movie.release_date}
                 rate={movie.vote_average}
                 image={movie.poster_path}
+                voteCount={movie.vote_count}
+                voteAvg={movie.vote_average}
+                overview={movie.overview}
+                adult={movie.adult}
+                id={movie.id}
               />
             </div>
           ))}
+        </div>
+        <div className="row d-flex justify-content-between mb-3">
+          <button onClick={() => prevBtn()} className="btn page-button ms-5">
+            <i class="fas fa-angle-left me-2"></i>Previous
+          </button>
+          <button onClick={() => nextBtn()} className="btn page-button me-5">
+            Next
+            <i class="fas fa-angle-right ms-2"></i>
+          </button>
         </div>
       </div>
     </>
   );
 }
-
 export default Movie;

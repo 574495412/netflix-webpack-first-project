@@ -1,7 +1,7 @@
 import React from "react";
 import "./register.css";
 
-export default function Signin() {
+export default function SignIn() {
   return (
     <div>
       <div className="con">

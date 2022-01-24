@@ -1,6 +1,6 @@
 import axios from "axios";
-import store from "../store/Store";
-import loaderStatus from "../store/Action";
+import store from "../Redux/Store/Store";
+import loadReducer from "../Redux/Reducers/LoadReducer";
 
 const axiosInstance = axios.create({
   baseURL: "https://api.themoviedb.org/3",
@@ -8,7 +8,7 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(
   function (request) {
-    store.dispatch(loaderStatus(true));
+    store.dispatch(loadReducer(true));
     return request;
   },
   function (error) {
@@ -18,7 +18,7 @@ axiosInstance.interceptors.request.use(
 
 axiosInstance.interceptors.response.use(
   function (response) {
-    store.dispatch(loaderStatus(false));
+    store.dispatch(loadReducer(false));
     return response;
   },
   function (error) {
