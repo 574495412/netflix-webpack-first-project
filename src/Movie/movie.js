@@ -27,7 +27,7 @@ function Movie() {
     setPage(--page);
   };
 
-  const loader = useSelector((state) => state.loader);
+  const loader = useSelector((state) => state.Load.loader);
 
   return (
     <>

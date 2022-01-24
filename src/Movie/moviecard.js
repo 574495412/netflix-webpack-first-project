@@ -8,7 +8,7 @@ import FavReducer from "../Redux/Reducers/FavReducer";
 
 function MovieCard(props) {
   const dispatch = useDispatch;
-  const favorite = useSelector((state) => state.favorite);
+  const favorite = useSelector((state) => state.Favorite.favorite);
   const addToFav = () => {
     dispatch(FavReducer(favorite === false ? true : false));
   };

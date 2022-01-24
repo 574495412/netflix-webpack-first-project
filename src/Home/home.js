@@ -3,7 +3,8 @@ import "./home.css";
 import { useSelector } from "react-redux";
 
 function Home() {
-  const language = useSelector((state) => state.lang);
+  const language = useSelector((state) => state.Language.lang);
+  console.log(language);
   return (
     <>
       <div className="con">

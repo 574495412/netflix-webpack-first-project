@@ -4,7 +4,7 @@ import LoadReducer from "../Reducers/LoadReducer";
 import FavReducer from "../Reducers/FavReducer";
 
 export default combineReducers({
-  LangReducer: LangReducer,
-  LoadReducer: LoadReducer,
-  FavReducer: FavReducer,
+  Language: LangReducer,
+  Load: LoadReducer,
+  Favorite: FavReducer,
 });

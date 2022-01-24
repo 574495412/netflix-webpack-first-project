@@ -5,14 +5,14 @@ import LangReducer from "../Redux/Reducers/LangReducer";
 import Logo2 from "../logo2.svg";
 
 function Navbar() {
-  const language = useSelector((state) => state.lang);
+  const language = useSelector((state) => state.Language.lang);
   const dispatch = useDispatch();
   const toggleLanguage = () => {
     dispatch(LangReducer(language === "العربية" ? "English" : "العربية"));
   };
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark pt-3">
+      <nav className="navbar navbar-expand-lg navbar-dark pt-3"> 
         <div className="container-fluid">
           <NavLink class="navbar-brand ms-4" to="/">
             <img
